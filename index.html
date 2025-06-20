@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HOMEPAGE</title>
+
+<link rel="stylesheet" type="text/css" href="CSS/Style.css">
+
+<style>
+  
+  p
+  {
+    text-align: center;
+  }
+
+</style>
+ 
+</head>
+<body>
+
+  <div class="header">WELCOME</div>
+
+  <div class="container">
+    <div class="sidebar">
+    <ul>
+      <li><a href="index.html"target="_self">HOME</a></li>
+      <li><a href="biodata.html"target="_self">BIODATA</a></li>
+      <li><a href="experience.html"target="_self">EXPERIENCE</a></li>
+      <li><a href="education.html"target="_self">EDUCATION</a></li>
+      <li><a href="family.html"target="_self">FAMILY</a></li>
+      <li><a href="gallery.html"target="_self">GALLERY</a></li>
+    </ul>
+
+  <div id="clock" style="margin-top: 30px; color: white; font-size: 14px; text-align: center; padding: 10px; border-top: 1px dotted white;">
+    Loading date & time...
+  </div>
+</div>
+
+    <div class="content">
+      <div class="content-box">
+        <p><b><sub>HELLO!</sub></b> MY NAME IS MUHAMMAD AFIQ BIN MOHD HISHAM</p>
+        <br><br>
+        <p>AND THIS MY <strong><sup>FIRST</sup></strong> WEBSITE</p>
+          <br><br><br>
+
+          <div style="display: flex; justify-content: center; align-items: center; gap: 222px; margin-top: 30px;">
+        <img src="PIC/ARROW.gif" alt="Left Image" style="width: 100px; height: auto;">
+
+        <button onclick="showThankYou()" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
+          Click Me!
+        </button>
+        <img src="PIC/ARROW.gif" alt="Right Image" style="width: 100px; transform: scaleX(-1);">
+      
+      </div>
+
+     
+    </div>
+  </div>
+
+
+<script>
+  function updateClock() {
+    const now = new Date();
+
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const dateString = now.toLocaleDateString('en-US', options); // 
+    const timeString = now.toLocaleTimeString(); 
+
+    document.getElementById("clock").textContent = dateString + " | " + timeString;
+  }
+
+  updateClock();
+  setInterval(updateClock, 1000);
+
+  function showThankYou() {
+    alert("Thank you for visiting!");
+  }
+</script>
+
+
+</body>
+</html>

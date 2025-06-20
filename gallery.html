@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GALLERY</title>
+  
+  <link rel="stylesheet" type="text/css" href="CSS/Style.css">
+
+  <style>
+    
+    h3
+    {
+      text-align: center;
+      text-decoration: underline;
+      background-color: paleturquoise;
+      color: darkred;
+    }    
+
+  </style>
+
+</head>
+<body>
+
+  <div class="header">GALLERY</div>
+
+  <div class="container">
+    <div class="sidebar">
+    <ul>
+      <li><a href="index.html"target="_self">HOME</a></li>
+      <li><a href="biodata.html"target="_self">BIODATA</a></li>
+      <li><a href="experience.html"target="_self">EXPERIENCE</a></li>
+      <li><a href="education.html"target="_self">EDUCATION</a></li>
+      <li><a href="family.html"target="_self">FAMILY</a></li>
+      <li><a href="gallery.html"target="_self">GALLERY</a></li>
+    </ul>
+
+    <div id="clock" style="margin-top: 30px; color: white; font-size: 14px; text-align: center; padding: 10px; border-top: 1px dotted white;">
+    Loading date & time...
+  </div>
+</div>
+
+    <div class="content">
+      <div class="content-box">
+        <h3>PICTURES</h3>
+        <div style="flex: 1;">
+          <div style="display: flex; gap: 30px; justify-content: center;">
+            
+            <img src="PIC/IMG1.jpg" alt="RAYA 2015" width="150" height="120">
+            <img src="PIC/IMG3.jpg" alt="MY OLD CAT" width="150" height="120">
+            <img src="PIC/IMG4.jpg" alt="RAYA 2013" width="150" height="120">
+            <img src="PIC/IMG5.jpg" alt="RAYA 2015 my aunts and grandma" width="150" height="120">
+           
+          </div>
+
+      <h3>VIDEO</h3>
+      <div style="flex: 1;">
+        <div style="display: flex; gap: 30px; justify-content: center;">
+          <video height="100" width="200" controls>
+            <source src="VID/VID1.mp4" type="Video/mp4">
+              Your browser does not support the video element.
+          </video>
+             
+          <video height="100" width="200" controls>
+            <source src="VID/VID2.mp4" type="video/mp4">
+              Your browser does not support the video element.
+          </video>
+
+          <video height="100" width="200" controls>
+            <source src="VID/VID3.mp4" type="video/mp4">
+              Your browser does not support the video element.
+          </video>
+        </div>
+
+       <h3>AUDIO</h3> 
+       <div style="flex: 1;">
+        <div style="display: flex; gap: 30px; justify-content: center;">
+        <audio controls>
+          <source src="AUD/AUDIO1.mp3" type="audio/mp3">
+        </audio>
+
+    </div>
+  </div>
+
+<script>
+  function updateClock() {
+    const now = new Date();
+
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const dateString = now.toLocaleDateString('en-US', options); 
+    const timeString = now.toLocaleTimeString(); 
+
+    document.getElementById("clock").textContent = dateString + " | " + timeString;
+  }
+
+  updateClock();
+  setInterval(updateClock, 1000);
+</script>
+
+</body>
+</html>

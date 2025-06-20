@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BIODATA</title>
+  
+<link rel="stylesheet" type="text/css" href="CSS/Style.css">
+
+<style>
+
+  .profile-table {
+    border-collapse: collapse;
+  }
+
+  .profile-table tr td {
+    border: 3px solid saddlebrown;
+  }
+
+  .profile-table td {
+    padding: 0.1px 130px;
+  }
+
+  .profile-label {
+    font-weight: bold;
+    font-size: 15px;
+    background-color: rosybrown;
+  }
+
+  .profile-label1 {
+    background-color: papayawhip;
+  }
+
+  #horizontal-line
+  {
+
+    width: 1190px;
+    height: 2px;
+    border-top: 3px solid black;
+  }
+
+</style>
+
+</head>
+<body>
+
+  <div class="header">BIODATA</div>
+
+  <div class="container">
+    <div class="sidebar">
+    <ul>
+      <li><a href="index.html"target="_self">HOME</a></li>
+      <li><a href="biodata.html"target="_self">BIODATA</a></li>
+      <li><a href="experience.html"target="_self">EXPERIENCE</a></li>
+      <li><a href="education.html"target="_self">EDUCATION</a></li>
+      <li><a href="family.html"target="_self">FAMILY</a></li>
+      <li><a href="gallery.html"target="_self">GALLERY</a></li>
+    </ul>
+
+    <div id="clock" style="margin-top: 30px; color: white; font-size: 14px; text-align: center; padding: 10px; border-top: 1px dotted white;">
+    Loading date & time...
+  </div>
+</div>
+
+    <div class="content">
+      <div class="content-box">
+        <div style="overflow: auto;">
+        <img src="PIC/FACE.jpg" alt="MY FACE" style="float: left; width: 150px; border: solid  6px saddlebrown; margin-right: 20px;">
+
+  <table class="profile-table">
+    <tr>
+      <td class="profile-label"><strong>NAME</strong></td>
+      <td class="profile-label1">MUHAMMAD AFIQ BIN MOHD HISHAM</td>
+    </tr>
+    <tr>
+      <td class="profile-label"><strong>SURNAME</strong></td>
+      <td class="profile-label1">AFIQ</td>
+    </tr>
+    <tr>
+      <td class="profile-label"><strong>AGE</strong></td>
+      <td class="profile-label1">21</td>
+    </tr>
+    <tr>
+      <td class="profile-label"><strong>GENDER</strong></td>
+      <td class="profile-label1">MALE</td>
+    </tr>
+    <tr>
+      <td class="profile-label"><strong>BIRTHDAY</strong></td>
+      <td class="profile-label1">15TH MARCH 2004</td>
+    </tr>
+    <tr>
+      <td class="profile-label"><strong>NATIONALITY</strong></td>
+      <td class="profile-label1">MALAYSIAN</td>
+    </tr>
+    <tr>
+      <td class="profile-label"><strong>RELIGION</strong></td>
+      <td class="profile-label1">MUSLIM</td>
+    </tr>
+      </table>
+    </div>
+        </p>
+
+<div id="horizontal-line"></div>
+
+<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-top: 30px; gap: 40px;">
+  <div style="flex: 1;">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15930.455656648276!2d101.68216615!3d3.14085325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc49fbaeb5beeb%3A0x988b28e1577340a!2sKuala%20Lumpur!5e0!3m2!1sen!2smy!4v1718429744907!5m2!1sen!2smy" 
+      width="100%" 
+      height="250" 
+      style="border:0; border-radius: 10px;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <div style="flex: 1; font-size: 16px;">
+    <p>
+      Hi! This is Afiq born in Hospital Batu Pahat, Johor but... <br>
+      I moved to Selangor since my father got a job promotion there when i was around 9 to 10 years old. <br>
+      So me and my family had to tag along, before this i lived with my grandma who i cherish with all my of heart.<br>
+      She would usually took care of me and my siblings ever since i was a baby because my mother got a job before we moved<br>
+      She's always there for us indulging in our mischivious behaviour despite her old age.
+    </p>
+  </div>
+</div>
+
+
+<script>
+  function updateClock() {
+    const now = new Date();
+
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const dateString = now.toLocaleDateString('en-US', options); 
+    const timeString = now.toLocaleTimeString(); 
+
+    document.getElementById("clock").textContent = dateString + " | " + timeString;
+  }
+
+  updateClock();
+  setInterval(updateClock, 1000);
+</script>
+
+
+</body>
+</html>
